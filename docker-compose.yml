@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  browserless-demo:
+    restart: always
+    image: browserless-demo:latest
+    container_name: browserless-demo
+    ports:
+      - 8080:8080
+    # volumes:
+    #   - ./src/config.js:/usr/src/app/config.js
+    #   - ./src/storage/current.json:/usr/src/app/storage/current.json
+    #   - ./src/storage/exec.log:/usr/src/app/storage/exec.log
+      

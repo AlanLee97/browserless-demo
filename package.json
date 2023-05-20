@@ -1,0 +1,21 @@
+{
+  "name": "browserless-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dk:build": "docker build -t browserless-demo:latest .",
+    "dk:rmi": "docker rmi browserless-demo:latest",
+    "dk:up": "docker-compose up",
+    "dk:start": "docker-compose down && npm run dk:rmi && npm run dk:build && npm run dk:up",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^20.2.1"
+  }
+}
